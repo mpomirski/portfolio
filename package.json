@@ -5,11 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
-    "lint": "next lint",
-    "pre-commit": "lint-staged",
-    "prepare": "husky",
-    "prettier": "prettier --write ."
+    "start": "next start"
   },
   "lint-staged": {
     "**/*.js": "prettier --write --ignore-unknown",
