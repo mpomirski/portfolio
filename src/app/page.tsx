@@ -1,11 +1,10 @@
-import Image from 'next/image';
-
+import About from '@/components/About';
+import Typewriter from '@/components/Typewriter';
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <h1>
-        Hello! My name's Michał.<div className="flex items-center">_</div>
-      </h1>
+      <Typewriter text="Hello! My name's Michał." size={'h1'} />
+      <About />
     </main>
   );
 }
