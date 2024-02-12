@@ -18,9 +18,17 @@ const config: Config = {
           '0%, 100%': { opacity: '1' },
           '50%': { opacity: '0' },
         },
+        loading: {
+          '0%': { height: '100%' },
+          '25%': { height: '75%' },
+          '50%': { height: '50%' },
+          '75%': { height: '25%' },
+          '100%': { height: '0' },
+        },
       },
       animation: {
         blink: 'blink 1s step-start infinite',
+        loading: 'loading 1s steps(10, end) forwards',
       },
     },
   },

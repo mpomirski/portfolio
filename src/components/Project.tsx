@@ -9,7 +9,7 @@ interface ProjectProps {
 const Project: React.FC<ProjectProps> = ({ title, description, image }) => {
   return (
     <div>
-      <h2>{title}</h2>
+      <h3>{title}</h3>
       <Image src={image} alt={title} width={100} height={100} />
       <p>{description}</p>
     </div>
