@@ -7,11 +7,13 @@ const projects = [
     title="Project 1"
     description="A cool project I made"
     image={my_image}
+    key="1"
   />,
   <Project
     title="Project 2"
     description="Another cool project I made"
     image={my_image}
+    key="2"
   />,
 ];
 const About: React.FC = () => {
