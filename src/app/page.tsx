@@ -1,10 +1,26 @@
 import About from '@/components/About';
-import Typewriter from '@/components/Typewriter';
+import Image from 'next/image';
+import my_image from '../../public/my_image.png';
+import Introduction from '@/components/Introduction';
+import Header from '@/components/Header';
+
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <Typewriter text="Hello! My name's Michał." size={'h1'} />
-      <About />
-    </main>
+    <div className="content min-h-full px-1 crt">
+      <Header />
+      <main className="flex min-h-max flex-row items-center">
+        <Introduction />
+        <Image
+          src={my_image}
+          alt="My image"
+          width={300}
+          height={300}
+          className="filter grayscale"
+        />
+      </main>
+      <section>
+        <About />
+      </section>
+    </div>
   );
 }

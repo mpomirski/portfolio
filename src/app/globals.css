@@ -3,7 +3,8 @@
 @tailwind utilities;
 
 :root {
-  --background-rgb: rgb(32, 80, 153);
+  --foreground-color: #7000b7;
+  --background-color: #ad75e7;
 }
 /* 
 @media (prefers-color-scheme: dark) {
@@ -13,32 +14,35 @@
     --background-end-rgb: 0, 0, 0;
   }
 } */
-
 /* basic styles by https://github.com/Andy-set-studio */
 body {
-  color: white;
-  background: var(--background-rgb);
-  padding: 3rem 0;
+  color: rgba(255, 255, 255, 0.7);
+  background: var(--background-color);
+  padding: 1rem;
   line-height: 1.5;
+  height: 100vh;
+}
+.content {
+  background-color: var(--foreground-color);
 }
 
 h1,
 h2,
 h3 {
-  line-height: 1.2;
+  line-height: 1;
   max-width: 35ch;
 }
 
 h1 {
-  font-size: 2.5rem;
-}
-
-h2 {
   font-size: 2rem;
 }
 
+h2 {
+  font-size: 1.5rem;
+}
+
 h3 {
-  font-size: 1.75rem;
+  font-size: 1rem;
 }
 
 p,
@@ -144,4 +148,20 @@ a:hover {
   .text-balance {
     text-wrap: balance;
   }
+}
+/* from http://aleclownes.com/2017/02/01/crt-display.html */
+.crt::before {
+  content: ' ';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%);
+  z-index: 2;
+  background-size:
+    100% 2px,
+    3px 100%;
+  pointer-events: none;
 }
