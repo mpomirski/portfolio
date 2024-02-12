@@ -13,14 +13,13 @@ const Introduction: React.FC = () => {
     IntroductionState.Introduction,
   );
   const description =
-    "I'm very cool. \
-    I like retro hardware, music and software development.\
-     You can check out my projects here.";
+    'This website is under constant construction \
+    Feel free to check it out and give me some feedback!';
   return (
     <div className="relative min-w-full h-max">
       <div className="flex flex-col">
         <Typewriter
-          text="Hello! I'm Michał."
+          text="Hi! I'm Michał."
           size={'h1'}
           speed={50}
           onFinish={() => setIntroState(IntroductionState.Image)}
