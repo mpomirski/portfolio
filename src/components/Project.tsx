@@ -8,9 +8,9 @@ interface ProjectProps {
 
 const Project: React.FC<ProjectProps> = ({ title, description, image }) => {
   return (
-    <div>
+    <div className="hover:bg-[var(--background-color)] hover:text-[var(--foreground-color)] w-max">
       <h3>{title}</h3>
-      <Image src={image} alt={title} width={100} height={100} />
+      <Image src={image} alt={title} width={150} height={150} />
       <p>{description}</p>
     </div>
   );

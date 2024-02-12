@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <div className="content min-h-full px-1 crt">
       <Header />
-      <main className="min-h-80">
+      <main className="min-h-64">
         <Introduction />
       </main>
       <section>

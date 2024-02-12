@@ -61,10 +61,6 @@ dt {
   font-weight: bold;
 }
 
-li + li {
-  margin-top: 0.7rem;
-}
-
 blockquote {
   border-left: 0.25rem solid;
   font-style: italic;

@@ -1,7 +1,7 @@
 import React from 'react';
 import ProjectReel from '@/components/ProjectReel';
 import Project from '@/components/Project';
-import my_image from '../../public/my_image.png';
+import my_image from '../../public/my_image2.jpg';
 const projects = [
   <Project
     title="Project 1"

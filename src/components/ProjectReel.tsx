@@ -8,10 +8,12 @@ interface ProjectReelProps {
 const ProjectReel: React.FC<ProjectReelProps> = ({ projects }) => {
   return (
     <div>
-      <h3>Project Reel</h3>
-      <ul className="flex flex-row align-bottom">
+      <h3 className="bg-[var(--background-color)] text-[var(--foreground-color)] pl-1 w-fit">
+        Project Reel
+      </h3>
+      <ul className="flex flex-row items-baseline align-middle">
         {projects.map((project, index) => (
-          <li key={index} className="p-5 h-full">
+          <li key={index} className="h-full w-full">
             {project}
           </li>
         ))}
