@@ -1,6 +1,5 @@
 import React from 'react';
 import Project from '@/components/Project';
-
 interface ProjectReelProps {
   projects: React.ReactElement<typeof Project>[];
 }

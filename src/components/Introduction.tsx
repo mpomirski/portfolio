@@ -8,18 +8,28 @@ enum IntroductionState {
   'Image',
   'Description',
 }
-const Introduction: React.FC = () => {
+
+interface IntroductionProps {
+  introduction?: string;
+  description?: string;
+}
+const Introduction: React.FC<IntroductionProps> = ({
+  introduction,
+  description,
+}) => {
   const [introState, setIntroState] = useState<IntroductionState>(
     IntroductionState.Introduction,
   );
-  const description =
-    'This website is under constant construction \
+  if (!introduction) introduction = "Hi! I'm Michał.";
+  if (!description)
+    description =
+      'This website is under constant construction \
     Feel free to check it out and give me some feedback!';
   return (
     <div className="relative w-full h-max">
       <div className="flex flex-col w-[65%]">
         <Typewriter
-          text="Hi! I'm Michał."
+          text={introduction}
           size={'h1'}
           speed={50}
           onFinish={() => setIntroState(IntroductionState.Image)}
