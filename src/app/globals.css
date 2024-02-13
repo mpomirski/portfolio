@@ -22,6 +22,20 @@ body {
   line-height: 1.5;
   height: 100vh;
 }
+
+.content::before {
+  content: ' ';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%);
+  background-size: 100% 2px;
+  z-index: 2;
+  pointer-events: none;
+}
 .content {
   background-color: var(--foreground-color);
 }
@@ -146,18 +160,20 @@ a:hover {
   }
 }
 /* from http://aleclownes.com/2017/02/01/crt-display.html */
-.crt::before {
-  content: ' ';
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%);
-  z-index: 2;
-  background-size:
-    100% 2px,
-    3px 100%;
-  pointer-events: none;
+
+@media not all and (min-width: 768px) {
+  body {
+    padding: 0;
+  }
+  h1 {
+    font-size: 1rem;
+  }
+
+  h2 {
+    font-size: 0.75rem;
+  }
+
+  h3 {
+    font-size: 0.5rem;
+  }
 }

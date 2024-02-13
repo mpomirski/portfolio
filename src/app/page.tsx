@@ -4,9 +4,9 @@ import Header from '@/components/Header';
 
 export default function Home() {
   return (
-    <div className="content min-h-full px-1 crt">
+    <div className="content px-1 min-h-full">
       <Header />
-      <main className="min-h-64">
+      <main className="min-h-32">
         <Introduction />
       </main>
       <section>

@@ -16,8 +16,8 @@ const Introduction: React.FC = () => {
     'This website is under constant construction \
     Feel free to check it out and give me some feedback!';
   return (
-    <div className="relative min-w-full h-max">
-      <div className="flex flex-col">
+    <div className="relative w-full h-max">
+      <div className="flex flex-col w-[65%]">
         <Typewriter
           text="Hi! I'm Michał."
           size={'h1'}
@@ -30,7 +30,7 @@ const Introduction: React.FC = () => {
       </div>
       {(introState === IntroductionState.Image ||
         introState === IntroductionState.Description) && (
-        <div className="absolute right-0 top-0 pr-52">
+        <div className="absolute right-0 top-0 max-md:pr-0 max-md:w-20">
           <div
             className="animate-loading bg-[#7000b7] w-full h-max bottom-0 absolute z-1"
             onAnimationEnd={() => setIntroState(IntroductionState.Description)}

@@ -10,9 +10,9 @@ export enum ButtonState {
 const Header: React.FC = () => {
   const [activePage, setActivePage] = React.useState(ButtonState.HOME);
   return (
-    <header className="flex flex-col justify-start items-center tracking-widest">
+    <header className="flex flex-col justify-start items-center tracking-widest max-md:text-[0.5em]">
       <div className="w-full min-h-max top-0 bg-[var(--foreground-color)]">
-        <ul className="flex flex-row items-center justify-around cursor-pointer">
+        <ul className="flex flex-row items-center justify-around cursor-pointer max-md:flex-col">
           <NavButton activePage={activePage} text={ButtonState.HOME} />
           <NavButton activePage={activePage} text={ButtonState.ABOUT} />
           <NavButton activePage={activePage} text={ButtonState.PROJECTS} />
