@@ -1,21 +1,32 @@
 'use client';
 import React from 'react';
-import { ButtonState } from './Header';
+import ButtonState from '@/utils/ButtonState';
+
 interface NavButtonProps {
   text: ButtonState;
   activePage: ButtonState;
+  source: string;
 }
 
-const NavButton: React.FC<NavButtonProps> = ({ text, activePage }) => {
+const NavButton: React.FC<NavButtonProps> = ({ text, activePage, source }) => {
+  const onClickButton = () => {
+    window.location.href = source;
+  };
   if (activePage === text) {
     return (
-      <button className="bg-[var(--background-color)] outline-none text-center w-full h-10 text-xl text-[var(--foreground-color)] max-md:text-sm">
+      <button
+        onClick={onClickButton}
+        className="bg-[var(--background-color)] outline-none text-center w-full h-10 text-xl text-[var(--foreground-color)] max-md:text-sm"
+      >
         {text.valueOf()}
       </button>
     );
   }
   return (
-    <button className="hover:bg-[var(--background-color)] hover:text-[var(--foreground-color)] outline-none text-center w-full h-10 text-xl max-md:text-sm">
+    <button
+      onClick={onClickButton}
+      className="hover:bg-[var(--background-color)] hover:text-[var(--foreground-color)] outline-none text-center w-full h-10 text-xl max-md:text-sm"
+    >
       {text.valueOf()}
     </button>
   );
