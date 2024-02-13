@@ -29,6 +29,12 @@ const Header: React.FC<HeaderProps> = ({ current_website }) => {
           />
           <NavButton
             activePage={activePage}
+            text={ButtonState.MUSIC}
+            source="https://soundcloud.com/ramen-571489791"
+            newPage={true}
+          />
+          <NavButton
+            activePage={activePage}
             text={ButtonState.CONTACT}
             source="/contact"
           />

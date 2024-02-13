@@ -6,11 +6,18 @@ interface NavButtonProps {
   text: ButtonState;
   activePage: ButtonState;
   source: string;
+  newPage?: boolean;
 }
 
-const NavButton: React.FC<NavButtonProps> = ({ text, activePage, source }) => {
+const NavButton: React.FC<NavButtonProps> = ({
+  text,
+  activePage,
+  source,
+  newPage,
+}) => {
   const onClickButton = () => {
-    window.location.href = source;
+    if (newPage) window.open(source, '_blank');
+    else window.location.href = source;
   };
   if (activePage === text) {
     return (
