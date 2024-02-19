@@ -26,7 +26,7 @@ const Introduction: React.FC<IntroductionProps> = ({
       'This website is under constant construction. \
     Feel free to check it out and give me some feedback!';
   return (
-    <div className="relative w-full h-max">
+    <div className="relative w-full max-md:h-80 md:h-40">
       <div className="flex flex-col w-[65%]">
         <Typewriter
           text={introduction}
@@ -40,7 +40,7 @@ const Introduction: React.FC<IntroductionProps> = ({
       </div>
       {(introState === IntroductionState.Image ||
         introState === IntroductionState.Description) && (
-        <div className="absolute right-0 top-0 max-md:pr-0 max-md:w-20">
+        <div className="absolute right-0 top-0 max-md:pr-0 max-md:w-40">
           <div
             className="animate-loading bg-[#7000b7] w-full h-max bottom-0 absolute z-1"
             onAnimationEnd={() => setIntroState(IntroductionState.Description)}

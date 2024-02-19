@@ -13,7 +13,11 @@ const NavButton: React.FC<NavButtonProps> = ({ text, source, newPage }) => {
     if (newPage) window.open(source, '_blank');
     else window.location.href = source;
   };
-  return <button onClick={onClickButton}>{text.valueOf()}</button>;
+  return (
+    <button onClick={onClickButton} className="w-full h-full">
+      {text.valueOf()}
+    </button>
+  );
 };
 
 export default NavButton;

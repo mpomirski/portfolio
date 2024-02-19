@@ -12,6 +12,7 @@ const projects = [
     description="This very website you're looking at right now!"
     technologies={['Next.js', 'Tailwind CSS']}
     image={website_image}
+    github="https://github.com/mpomirski/portfolio"
     key="1"
   />,
   <Project
