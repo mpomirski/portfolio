@@ -4,7 +4,7 @@ import BlinkingCursor from '@/components/BlinkingCursor';
 interface TypewriterProps {
   text: string;
   speed?: number;
-  size: 'h1' | 'h2' | 'h3';
+  size?: 'h1' | 'h2' | 'h3';
   onFinish?: () => void;
   className?: string;
 }
@@ -12,13 +12,14 @@ interface TypewriterProps {
 const Typewriter: React.FC<TypewriterProps> = ({
   text,
   speed = 100,
-  size = 'h1',
+  size = 'p',
   onFinish = () => {},
   className = '',
 }) => {
   const [displayText, setDisplayText] = useState('');
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isFinished, setIsFinished] = useState(false);
+  const Tag = `${size}` as keyof JSX.IntrinsicElements;
 
   useEffect(() => {
     if (currentIndex < text.length) {
@@ -33,31 +34,12 @@ const Typewriter: React.FC<TypewriterProps> = ({
       }, 1000);
     }
   }, [currentIndex, text, speed]);
-
-  if (size === 'h1') {
-    return (
-      <h1 className={className}>
-        {displayText}
-        {!isFinished && <BlinkingCursor />}
-      </h1>
-    );
-  }
-  if (size === 'h2') {
-    return (
-      <h2 className={className}>
-        {displayText}
-        {!isFinished && <BlinkingCursor />}
-      </h2>
-    );
-  }
-  if (size === 'h3') {
-    return (
-      <h3 className={className}>
-        {displayText}
-        {!isFinished && <BlinkingCursor />}
-      </h3>
-    );
-  }
+  return (
+    <Tag className={className}>
+      {displayText}
+      {!isFinished && <BlinkingCursor />}
+    </Tag>
+  );
 };
 
 export default Typewriter;

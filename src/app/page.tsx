@@ -1,15 +1,17 @@
-import About from '@/components/About';
 import Introduction from '@/components/Introduction';
 import Header from '@/components/Header';
 import ButtonState from '@/utils/ButtonState';
 import ProjectReel from '@/components/ProjectReel';
 import Project from '@/components/Project';
 import my_image from '../../public/my_image3.jpg';
+import website_image from '../../public/website.png';
+
 const projects = [
   <Project
-    title="Project 1"
-    description="A cool project I made"
-    image={my_image}
+    title="This website!"
+    description="This very website you're looking at right now!"
+    technologies={['Next.js', 'Tailwind CSS']}
+    image={website_image}
     key="1"
   />,
   <Project

@@ -23,7 +23,7 @@ const Introduction: React.FC<IntroductionProps> = ({
   if (!introduction) introduction = "Hi! I'm Michał.";
   if (!description)
     description =
-      'This website is under constant construction \
+      'This website is under constant construction. \
     Feel free to check it out and give me some feedback!';
   return (
     <div className="relative w-full h-max">
@@ -35,7 +35,7 @@ const Introduction: React.FC<IntroductionProps> = ({
           onFinish={() => setIntroState(IntroductionState.Image)}
         />
         {introState === IntroductionState.Description && (
-          <Typewriter text={description} size={'h2'} speed={30} />
+          <Typewriter text={description} speed={30} className="w-[85%]" />
         )}
       </div>
       {(introState === IntroductionState.Image ||

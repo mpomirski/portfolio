@@ -59,7 +59,10 @@ const Timeline: React.FC = () => {
                 <a href="https://www.ambitni.edu.pl/">AMBITNI</a> as an IT
                 tutor, preparing high school students for the IT matura exam.
               </li>
-              <p>Taught Python, C++, Excel, Algorithms and SQL.</p>
+              <p>
+                Taught <b>Python</b>, <b>C++</b>, <b>Excel</b>,{' '}
+                <b>Algorithms</b> and <b>SQL</b>.
+              </p>
             </ul>
           </li>
           <li className="p-1">
@@ -76,8 +79,8 @@ const Timeline: React.FC = () => {
                 Started studying Computer Science at Gdańsk University of
                 Technology.
                 <p>
-                  Studied algorithms, data structures, assembly, Java, C++ and
-                  PHP.
+                  Studied <b>algorithms</b>, <b>data structures</b>,{' '}
+                  <b>assembly</b>, <b>Java</b>, <b>C++</b> and <b>PHP</b>.
                 </p>
               </li>
               <li>
@@ -114,8 +117,8 @@ const Timeline: React.FC = () => {
                   height="10"
                   className="inline-block w-4 h-4 mr-2 mb-1"
                 />
-                Learnt coding on my own during high school. Started with Python,
-                C++ and Javascript.
+                Learnt coding on my own during high school. Started with{' '}
+                <b>Python</b>,<b>C++</b> and <b>Javascript</b>.
               </li>
             </ul>
           </li>
