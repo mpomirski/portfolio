@@ -3,7 +3,8 @@ import ProjectReel from '@/components/ProjectReel';
 import Introduction from '@/components/Introduction';
 import ButtonState from '@/utils/ButtonState';
 import projects from '@/utils/projects';
-const AboutPage: React.FC = () => {
+
+const ProjectPage: React.FC = () => {
   return (
     <div className="content px-1 min-h-[calc(100vh-1rem)] relative">
       <Header current_website={ButtonState.PROJECTS} />
@@ -23,4 +24,4 @@ const AboutPage: React.FC = () => {
   );
 };
 
-export default AboutPage;
+export default ProjectPage;

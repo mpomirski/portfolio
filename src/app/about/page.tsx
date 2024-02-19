@@ -7,7 +7,7 @@ const AboutPage: React.FC = () => {
     <div className="content px-1 min-h-[calc(100vh-1rem)] relative">
       <Header current_website={ButtonState.ABOUT} />
       <main className="min-h-32">
-        <Introduction />
+        <Introduction description="Here you can learn more about me." />
       </main>
       <section className="w-[65%]">
         <About />
