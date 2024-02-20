@@ -1,7 +1,10 @@
 import Project from '@/components/Project';
-import my_image from '../../public/my_image3.jpg';
-import website_image from '../../public/website.png';
-
+import basic_image from '@/assets/basic.jpg';
+import website_image from '@/assets/website.png';
+import potpourri_image from '@/assets/potpourri.png';
+import fastapi_image from '@/assets/fastapi.png';
+import milkyland_image from '@/assets/milky_land.png';
+import pokeguesser_image from '@/assets/pokeguesser.png';
 const projects = [
   <Project
     title="This website!"
@@ -12,40 +15,69 @@ const projects = [
     key="1"
   />,
   <Project
-    title="Project 2"
-    description="Another cool project I made"
-    image={my_image}
+    title="Potpourri"
+    description="A bullet hell game made in SDL2"
+    image={potpourri_image}
+    technologies={['C++', 'SDL2']}
+    github="https://github.com/mpomirski/Potpourri"
+    location="https://github.com/mpomirski/Potpourri"
     key="2"
   />,
   <Project
-    title="Project 3"
-    description="Yet another cool project I made"
-    image={my_image}
+    title="Rest API (mongoDB)"
+    description="A Restful API made in Node.js"
+    technologies={['Node.js', 'Express.js', 'MongoDB', 'Docker']}
+    github="https://github.com/mpomirski/rest-api-express"
+    location="https://mpomirski.pl/app/1/products"
+    image={basic_image}
     key="3"
   />,
   <Project
-    title="Project 4"
-    description="The last cool project I made"
-    image={my_image}
+    title="Rest API (Neo4j)"
+    description="A Restful API made in Python"
+    technologies={['Python', 'Flask', 'Neo4j']}
+    github="https://github.com/mpomirski/rest-api-neo4j"
+    image={basic_image}
     key="4"
   />,
   <Project
-    title="Project 5"
-    description="The last cool project I made"
-    image={my_image}
+    title="Milky Land"
+    description="A project made to learn NextJS and TailwindCSS"
+    technologies={['Next.js', 'Tailwind CSS', 'TypeScript', 'Formik', 'Yup']}
+    image={milkyland_image}
     key="5"
   />,
   <Project
-    title="Project 6"
-    description="The last cool project I made"
-    image={my_image}
+    title="Discord / Slack clone (backend only)"
+    description="A backend project simulating a Discord / Slack clone with authorization using JWT Tokens."
+    image={fastapi_image}
+    technologies={[
+      'Python',
+      'FastAPI',
+      'Docker',
+      'JWToken',
+      'Postman',
+      'Swagger',
+    ]}
+    github="https://github.com/UniversityOfGdanskProjects/projektprogramistyczny-mpomirski"
+    location="https://mpomirski.pl/app/2/docs"
     key="6"
   />,
   <Project
-    title="Project 7"
-    description="The last cool project I made"
-    image={my_image}
+    title="Rest API (fastAPI)"
+    description="a Restful API made in Python writted for recuitment purposes"
+    image={basic_image}
+    technologies={['Python', 'fastAPI']}
+    github="https://github.com/mpomirski/backend-project"
     key="7"
+  />,
+  <Project
+    title="Pokemon Guesser"
+    description="A project made to learn React"
+    image={pokeguesser_image}
+    technologies={['React', 'TypeScript', 'Bootstrap']}
+    github="https://github.com/mpomirski/Pokemon-guesser"
+    key="8"
   />,
 ];
 

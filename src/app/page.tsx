@@ -12,7 +12,7 @@ export default function Home() {
         <Introduction />
       </main>
       <section>
-        <ProjectReel projects={projects.slice(0, 4)} />
+        <ProjectReel projects={projects.slice(0, 3)} />
       </section>
     </div>
   );

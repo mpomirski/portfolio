@@ -2,7 +2,7 @@
 import Typewriter from '@/components/Typewriter';
 import { useState } from 'react';
 import Image from 'next/image';
-import my_image2 from '../../public/my_image2.jpg';
+import my_image2 from '@/assets/my_image2.jpg';
 enum IntroductionState {
   'Introduction',
   'Image',

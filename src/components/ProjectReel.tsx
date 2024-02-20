@@ -16,7 +16,7 @@ const ProjectReel: React.FC<ProjectReelProps> = ({
       </h2>
       <ul className={className}>
         {projects.map((project, index) => (
-          <li key={index} className="w-full">
+          <li key={index} className="w-full h-full">
             {project}
           </li>
         ))}

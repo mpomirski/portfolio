@@ -1,4 +1,4 @@
-import WorkIcon from '../../public/next.png';
+import WorkIcon from '@/assets/next.png';
 import Image from 'next/image';
 
 const Timeline: React.FC = () => {
@@ -118,7 +118,7 @@ const Timeline: React.FC = () => {
                   className="inline-block w-4 h-4 mr-2 mb-1"
                 />
                 Learnt coding on my own during high school. Started with{' '}
-                <b>Python</b>,<b>C++</b> and <b>Javascript</b>.
+                <b>Python</b>, <b>C++</b> and <b>Javascript</b>.
               </li>
             </ul>
           </li>
