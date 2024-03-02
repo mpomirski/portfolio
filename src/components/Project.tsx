@@ -47,7 +47,7 @@ const Project: React.FC<ProjectProps> = ({
             alt={title}
             width={0}
             height={0}
-            className="h-[123px] w-[220px] object-center"
+            className="h-[246px] w-[440px] object-center"
           />
         </div>
         <p>{description}</p>

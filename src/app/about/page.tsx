@@ -9,7 +9,7 @@ const AboutPage: React.FC = () => {
       <main className="min-h-32">
         <Introduction description="Here you can learn more about me." />
       </main>
-      <section className="w-[65%]">
+      <section className="w-[65%] max-md:w-[100%]">
         <About />
       </section>
     </div>
