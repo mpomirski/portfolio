@@ -1,5 +1,8 @@
 FROM node:latest as build
-COPY . /app
+COPY package.json package-lock.json /app/
+COPY src /app/src
+COPY .husky /app/.husky
+COPY *.js *.ts /app/
 WORKDIR /app
 RUN npm install
 CMD ["npm", "run", "build"]

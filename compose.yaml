@@ -1,5 +1,7 @@
 services:
-  web:
+  portfolio:
+    container_name: portfolio
     build: .
     ports:
       - "3005:3000"
+    restart: always
