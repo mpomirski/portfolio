@@ -19,7 +19,7 @@ const Typewriter: React.FC<TypewriterProps> = ({
   const [displayText, setDisplayText] = useState('');
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isFinished, setIsFinished] = useState(false);
-  const Tag = `${size}` as keyof JSX.IntrinsicElements;
+  const Tag = `${size}` as keyof React.JSX.IntrinsicElements;
 
   useEffect(() => {
     if (currentIndex < text.length) {
@@ -33,7 +33,7 @@ const Typewriter: React.FC<TypewriterProps> = ({
         setIsFinished(true);
       }, 1000);
     }
-  }, [currentIndex, text, speed]);
+  }, [currentIndex, text, speed, onFinish]);
   return (
     <Tag className={className}>
       {displayText}

@@ -1,13 +1,13 @@
-import Image, { StaticImageData } from 'next/image';
-import github_image from '@/assets/github.svg';
+import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
-interface ProjectProps {
+export interface ProjectProps {
+  project_id: number;
   title: string;
   description: string;
   technologies?: string[];
   github?: string;
-  image: StaticImageData;
+  image: string;
   location?: string;
 }
 
@@ -19,6 +19,7 @@ const Project: React.FC<ProjectProps> = ({
   github,
   technologies,
 }) => {
+  const github_image = '/github.svg';
   return (
     <div className="hover:bg-[var(--background-color)] hover:text-[var(--foreground-color)] w-full pt-2">
       <div className="flex flex-row items-end justify-center">
@@ -45,8 +46,8 @@ const Project: React.FC<ProjectProps> = ({
           <Image
             src={image}
             alt={title}
-            width={0}
-            height={0}
+            width={440}
+            height={246}
             className="h-[246px] w-[440px] object-center"
           />
         </div>
@@ -54,8 +55,8 @@ const Project: React.FC<ProjectProps> = ({
         {technologies && <p>Tech used:</p>}
         {technologies && (
           <ul className="flex flex-col items-start">
-            {technologies?.map((technology, index) => (
-              <li key={index}>{technology}</li>
+            {technologies?.map((technology) => (
+              <li key={technology}>{technology}</li>
             ))}
           </ul>
         )}

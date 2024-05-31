@@ -1,12 +1,22 @@
 {
   "extends": ["next/core-web-vitals", "next", "eslint:recommended"],
-  "plugins": ["prettier"],
+  "plugins": ["prettier", "@typescript-eslint"],
   "globals": {
     "React": "readonly"
   },
   "rules": {
-    "prettier/prettier": "warn",
-    "no-console": "warn",
-    "no-unused-vars": "warn"
+    "prettier/prettier": [
+      "error",
+      {
+        "endOfLine": "auto",
+        "singleQuote": true,
+        "semi": true,
+        "tabWidth": 2,
+        "trailingComma": "all"
+      }
+    ],
+    "no-console": "error",
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": "error"
   }
 }

@@ -1,0 +1,38 @@
+[
+    {
+        "id": "linkedin",
+        "link": "https://www.linkedin.com/in/michal-pomirski/",
+        "image": {
+            "src": "/linkedin.png",
+            "alt": "LinkedIn"
+        },
+        "text": "LinkedIn: Michał Pomirski"
+    },
+    {
+        "id": "github",
+        "link": "https://github.com/mpomirski",
+        "image": {
+            "src": "/github.svg",
+            "alt": "github"
+        },
+        "text": "GitHub: mpomirski"
+    },
+    {
+        "id": "gitlab",
+        "link": "https://gitlab.com/mpomirski",
+        "image": {
+            "src": "/gitlab.png",
+            "alt": "gitlab"
+        },
+        "text": "GitLab: mpomirski"
+    },
+    {
+        "id": "email",
+        "link": "mailto:michal.pomirski01@gmail.com",
+        "image": {
+            "src": "/email.png",
+            "alt": "email"
+        },
+        "text": "Email: michal.pomirski01@gmail.com"
+    }
+]

@@ -6,14 +6,6 @@
   --foreground-color: #7000b7;
   --background-color: #ad75e7;
 }
-/* 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-} */
 /* basic styles by https://github.com/Andy-set-studio */
 body {
   color: rgba(255, 255, 255, 0.7);

@@ -1,7 +1,8 @@
 import React from 'react';
 import Project from '@/components/Project';
+import { ProjectProps } from '@/components/Project';
 interface ProjectReelProps {
-  projects: React.ReactElement<typeof Project>[];
+  projects: ProjectProps[];
   className?: string;
 }
 
@@ -15,9 +16,17 @@ const ProjectReel: React.FC<ProjectReelProps> = ({
         Project Reel
       </h2>
       <ul className={className}>
-        {projects.map((project, index) => (
-          <li key={index} className="w-full h-full">
-            {project}
+        {projects.map((project) => (
+          <li key={project.project_id} className="w-full">
+            <Project
+              project_id={project.project_id}
+              description={project.description}
+              image={project.image}
+              title={project.title}
+              github={project.github}
+              location={project.location}
+              technologies={project.technologies}
+            />
           </li>
         ))}
       </ul>
