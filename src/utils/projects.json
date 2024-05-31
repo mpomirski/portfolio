@@ -1,0 +1,103 @@
+[
+  {
+    "title": "This website!",
+    "description": "This very website you're looking at right now!",
+    "technologies": [
+      "Next.js",
+      "Tailwind CSS"
+    ],
+    "image": "/website.png",
+    "github": "https://github.com/mpomirski/portfolio",
+    "project_id": 1
+  },
+  {
+    "title": "Potpourri",
+    "description": "A bullet hell game made in SDL2",
+    "technologies": [
+      "C++",
+      "SDL2"
+    ],
+    "image": "/potpourri.png",
+    "github": "https://github.com/mpomirski/Potpourri",
+    "location": "https://github.com/mpomirski/Potpourri",
+    "project_id": 2
+  },
+  {
+    "title": "Rest API (mongoDB)",
+    "description": "A Restful API made in Node.js",
+    "technologies": [
+      "Node.js",
+      "Express.js",
+      "MongoDB",
+      "Docker"
+    ],
+    "image": "/basic.jpg",
+    "github": "https://github.com/mpomirski/rest-api-express",
+    "location": "https://mpomirski.pl/app/1/products",
+    "project_id": 3
+  },
+  {
+    "title": "Rest API (Neo4j)",
+    "description": "A Restful API made in Python",
+    "technologies": [
+      "Python",
+      "Flask",
+      "Neo4j"
+    ],
+    "image": "/basic.jpg",
+    "github": "https://github.com/mpomirski/rest-api-neo4j",
+    "project_id": 4
+  },
+  {
+    "title": "Milky Land",
+    "description": "A project made to learn NextJS and TailwindCSS",
+    "technologies": [
+      "Next.js",
+      "Tailwind CSS",
+      "TypeScript",
+      "Formik",
+      "Yup"
+    ],
+    "image": "/milky_land.png",
+    "project_id": 5
+  },
+  {
+    "title": "Discord / Slack clone (backend only)",
+    "description": "A backend project simulating a Discord / Slack clone with authorization using JWT Tokens.",
+    "image": "/fastapi.png",
+    "technologies": [
+      "Python",
+      "FastAPI",
+      "Docker",
+      "JWToken",
+      "Postman",
+      "Swagger"
+    ],
+    "github": "https://github.com/UniversityOfGdanskProjects/projektprogramistyczny-mpomirski",
+    "location": "https://mpomirski.pl/app/2/docs",
+    "project_id": 6
+  },
+  {
+    "title": "Rest API (fastAPI)",
+    "description": "a Restful API made in Python writted for recuitment purposes",
+    "image": "/basic.jpg",
+    "technologies": [
+      "Python",
+      "fastAPI"
+    ],
+    "github": "https://github.com/mpomirski/backend-project",
+    "project_id": 7
+  },
+  {
+    "title": "Pokemon Guesser",
+    "description": "A project made to learn React",
+    "image": "/pokeguesser.png",
+    "technologies": [
+      "React",
+      "TypeScript",
+      "Bootstrap"
+    ],
+    "github": "https://github.com/mpomirski/Pokemon-guesser",
+    "project_id": 8
+  }
+]

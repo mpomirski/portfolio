@@ -1,7 +1,7 @@
-import WorkIcon from '@/assets/next.png';
 import Image from 'next/image';
 
 const Timeline: React.FC = () => {
+  const WorkIcon = '/next.png';
   return (
     <div className="flex flex-col h-full w-full [&_p]:text-sm [&_p]:ml-4">
       <h2 className="bg-[var(--background-color)] text-[var(--foreground-color)] my-4">

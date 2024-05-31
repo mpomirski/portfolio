@@ -1,17 +1,17 @@
 'use client';
 import Typewriter from '@/components/Typewriter';
-import { useState } from 'react';
+import { useState, useCallback } from 'react';
 import Image from 'next/image';
-import my_image2 from '@/assets/my_image2.jpg';
+
 enum IntroductionState {
-  'Introduction',
-  'Image',
-  'Description',
+  Introduction = 'Introduction',
+  Image = 'Image',
+  Description = 'Description',
 }
 
 interface IntroductionProps {
-  introduction?: string;
-  description?: string;
+  introduction: string;
+  description: string;
   showImage?: boolean;
   className?: string;
 }
@@ -24,11 +24,18 @@ const Introduction: React.FC<IntroductionProps> = ({
   const [introState, setIntroState] = useState<IntroductionState>(
     IntroductionState.Introduction,
   );
-  if (!introduction) introduction = "Hi! I'm Michał.";
-  if (!description)
-    description =
-      'This website is under constant construction. \
-    Feel free to check it out and give me some feedback!';
+  const [imageLoaded, setImageLoaded] = useState(false);
+  const my_image2 = '/my_image2.jpg';
+
+  const handleIntroFinish = useCallback(() => {
+    setIntroState(IntroductionState.Image);
+  }, []);
+
+  const handleImageLoadFinish = useCallback(() => {
+    setIntroState(IntroductionState.Description);
+    setImageLoaded(true);
+  }, []);
+
   return (
     <div className={className}>
       <div className="flex flex-col w-[65%]">
@@ -36,21 +43,24 @@ const Introduction: React.FC<IntroductionProps> = ({
           text={introduction}
           size={'h1'}
           speed={50}
-          onFinish={() => setIntroState(IntroductionState.Image)}
+          onFinish={handleIntroFinish}
         />
         {introState === IntroductionState.Description && (
-          <Typewriter text={description} speed={30} className="w-[85%]" />
+          <Typewriter text={description} speed={30} className="w-[60%]" />
         )}
       </div>
+
       {(introState === IntroductionState.Image ||
         introState === IntroductionState.Description) &&
         showImage && (
           <div className="absolute right-0 top-0 max-md:pr-0 max-md:w-40">
             <div
               className="animate-loading bg-[#7000b7] w-full h-max bottom-0 absolute z-1"
-              onAnimationEnd={() =>
-                setIntroState(IntroductionState.Description)
-              }
+              onAnimationEnd={() => {
+                if (!imageLoaded) {
+                  handleImageLoadFinish();
+                }
+              }}
             ></div>
             <Image
               src={my_image2}

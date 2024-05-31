@@ -15,7 +15,7 @@ const NavButton: React.FC<NavButtonProps> = ({ text, source, newPage }) => {
   };
   return (
     <button onClick={onClickButton} className="w-full h-full">
-      {text.valueOf()}
+      {text}
     </button>
   );
 };
