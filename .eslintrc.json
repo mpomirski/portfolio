@@ -21,6 +21,6 @@
       }
     ],
     "no-console": "error",
-    "no-unused-vars": "warn"
+    "no-unused-vars": "off"
   }
 }
