@@ -1,11 +1,11 @@
 FROM node:latest AS build
 COPY package.json package-lock.json /app/
 COPY src /app/src
+COPY public app/public
 COPY .husky /app/.husky
-COPY *.js *.ts /app/
+COPY *.js *.ts *.json /app/
 WORKDIR /app
-RUN npm install
-CMD ["npm", "run", "build"]
+RUN npm install && npm run build
 
 FROM node:latest AS production
 COPY --from=build /app /app
