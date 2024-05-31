@@ -1,6 +1,5 @@
 services:
   portfolio:
-    container_name: portfolio
     build: .
     ports:
       - "3005:3000"
